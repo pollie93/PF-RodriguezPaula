@@ -5,33 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esport</title>
+    <!-- CSS BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
     <!-- vinculamos el css a mi html -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <a href="../index.html" class="container-logo">
-            <img src="../images/riotgames_logo.png" alt="Logo Riot Games" class="img-logo-riot"/>
-            <img src="../images/logo_lol_encabezado.png" alt="Logo League of Legends" class="img-logo-l"/>
-        </a>
-        
-        <!-- Para crear la botonera, se genera por medio de listas -->
-        <nav class="navigator">
-            <ul class="ul-navigator">
-                <li>
-                    <a href="champions.html" class="links-nav">CONOCÉ A NUESTROS CAMPEONES</a>
-                </li>
-                <li>
-                    <a href="noticias.html" class="links-nav">NOTICIAS</a>
-                </li>
-                <li>
-                    <a href="#" class="links-nav">ESPORT</a>
-                </li>
-                <li>
-                    <a href="entretenimiento.html" class="links-nav">ENTRETENIMIENTO</a>
-                </li>
-            </ul>
+     <!-- Inicio Navbar con BS-->
+     <header>
+        <nav class="navbar navbar-expand-xl" id="botonera">
+            <div class="container-fluid">
+                <a href="../index.html" class="container-logo">
+                    <img src="../images/riotgames_logo.png" alt="Logo Riot Games" class="img-logo-riot"/>
+                    <img src="../images/logo_lol_encabezado.png" alt="Logo League of Legends" class="img-logo-l"/>
+                </a>
+                
+                <button class="navbar-toggler" type="button" id="burguer" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" aria-current="page" href="champions.html">CONOCÉ A NUESTROS CAMPEONES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" href="noticias.html">NOTICIAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" href="#">ESPORT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" href="entretenimiento.html">ENTRETENIMIENTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -77,7 +86,7 @@
         </section>
     </main>
 
-    <footer class="container-footer">
+    <footer class="flex-lg-row" id="container-footer">
         <!-- links absolutos, me doy cuenta por la URL -->
         <div class="footer-text">
             <div class="text-footer-riot">
@@ -107,8 +116,7 @@
         </div>
             
     </footer>
-
-
-    
+    <!-- JS de Bs -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
 </body>
 </html>

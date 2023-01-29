@@ -5,35 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League of Legends</title>
+    <!-- CSS BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
-    <!-- vinculamos el css a mi html -->
+    <!-- vinculamos mi css a mi html -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Inicio Navbar con BS-->
     <header>
-        <a href="index.html" class="container-logo">
-            <img src="images/riotgames_logo.png" alt="Logo Riot Games" class="img-logo-riot"/>
-            <img src="images/logo_lol_encabezado.png" alt="Logo League of Legends" class="img-logo-l"/>
-        </a>
-        
-        <!-- Para crear la botonera, se genera por medio de listas -->
-        <nav class="navigator">
-            <ul class="ul-navigator">
-                <li>
-                    <a href="pages/champions.html" class="links-nav">CONOCÉ A NUESTROS CAMPEONES</a>
-                </li>
-                <li>
-                    <a href="pages/noticias.html" class="links-nav">NOTICIAS</a>
-                </li>
-                <li>
-                    <a href="pages/esport.html" class="links-nav">ESPORT</a>
-                </li>
-                <li>
-                    <a href="pages/entretenimiento.html" class="links-nav">ENTRETENIMIENTO</a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-xl" id="botonera">
+            <div class="container-fluid">
+                <a href="index.html" class="container-logo">
+                    <img src="images/riotgames_logo.png" alt="Logo Riot Games" class="img-logo-riot"/>
+                    <img src="images/logo_lol_encabezado.png" alt="Logo League of Legends" class="img-logo-l"/>
+                </a>
+                
+                <button class="navbar-toggler" type="button" id="burguer" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" aria-current="page" href="pages/champions.html">CONOCÉ A NUESTROS CAMPEONES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" href="pages/noticias.html">NOTICIAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" href="pages/esport.html">ESPORT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-nav" href="pages/entretenimiento.html">ENTRETENIMIENTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+    <!-- Fin Navbar con BS -->
 
     <main class="main-container">
         <section class="container-img">
@@ -41,10 +51,10 @@
             <img src="images/League-of-Legends-logo.png" alt="Logo League of Legends" class="titulo-logo">
         </section>
         <section class="info-juego">
-            <div class="titulo">
+            <div class="titulo animate">
                 <h1>¿Qué es League of Legends?</h1>
             </div>
-            <div class="container-description">
+            <div class="container-description col-sm-8 col-md-6 col-lg-6 mx-sm-2">
                 <p class="descripcion-juego">
                 Es un juego de estrategia por equipos.
                 Cada equipo conformado por cinco poderosos campeones, que se enfrentan para destruir la base del otro equipo, llamada Nexo.
@@ -57,22 +67,23 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam eveniet harum unde sequi error rerum non architecto quasi officiis quae. Quis assumenda adipisci ad voluptas iste corporis earum cum accusamus!
                 </p>
             </div>
-            <div class="titulo-formulario">
+            <div class="titulo-formulario animate">
                 <h2>¿Querés saber mas? No dudes en contactarnos!</h2>
-            </div>    
+            </div> 
+            <!-- formulario BS -->
             <form action="" >
-                <div class="container-formulario">
-                    <label class="label-text" for="name">Nombre y Apellido</label>
-                    <input class="input" placeholder="Ingresa tu nombre" type="text" id="name">
+                <div class="mb-3 label-text">
+                    <label for="exampleInputNombre" class="form-label">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="exampleInputText" aria-describedby="nameHelp" placeholder="Ingresa tu nombre y apellido">
                 </div>
-                <div class="container-formulario">
-                    <label class="label-text" for="email">Email</label>
-                    <input class="input" placeholder="Ingresa tu email" type="email" id="email"/>
+                <div class="mb-3 label-text">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email">
                 </div>
-                <div class="container-formulario">
-                    <label class="label-text" for="mensaje">Mensaje</label>
-                    <textarea class="mensaje" placeholder="¡Escribe aquí tu mensaje!" for="mensaje"></textarea>
-                </div>
+                <div class="mb-3 label-text">
+                    <label for="label-text" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="¡Escribe aquí tu mensaje!"></textarea>
+                  </div>
                 <div class="container-bottom">
                     <input type="submit" value="Enviar" class="button button-submit">
                     <input type="reset" value="Cancelar" class="button">
@@ -81,7 +92,7 @@
         </section>
     </main>
 
-    <footer class="container-footer">
+    <footer class="flex-lg-row" id="container-footer">
         <!-- links absolutos, me doy cuenta por la URL -->
         <div class="footer-text">
             <div class="text-footer-riot">
@@ -112,7 +123,7 @@
             
     </footer>
 
-
-    
+<!-- JS de Bs -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
