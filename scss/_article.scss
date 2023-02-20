@@ -82,18 +82,39 @@
         max-width:100%;
         position: relative;
         filter: brightness(70%);
+        @include mediaQuery (m) {
+            height: auto;
+        }
     }
     .ver-temporada{
         position: absolute;
         top: 45%;
         left: 10%;
+        @include mediaQuery(m){
+            top: 19%;
+            left: 4%;
+            font-weight: $textBold;
+            font-size: $textLg;
+        }
+        @include mediaQuery(sm){
+            top: 12%;
+            left: 10%;
+            font-weight: $textBold;
+            font-size: 1em;
+        }
         .titulo-esports{
             color: map-get($map: $whitePalette, $key: 'cuatro') !important;
             font-size: 60px;
             text-transform: uppercase;
             font-weight: $textBold;
+            @include mediaQuery(m) {
+                font-size: $textLg;
+            }
             &.parrafo-temporada{
                 margin-bottom: 15px;
+                @include mediaQuery(m) {
+                    font-size: $textLg;
+                }
             }
         }
     }   
@@ -110,6 +131,9 @@
             .imagen-esports{
                 height: 60%;
                 border-radius: 30px;
+                @include mediaQuery(m){
+                    max-height: 50%;
+                }
             }
             .parrafo-esport{
                 color: map-get($map: $whitePalette, $key:'tres');
@@ -169,6 +193,9 @@
         text-align: center;
         .text-campeon{
             font-size: 80px;
+            @include mediaQuery(sm){
+                font-size: 65px;
+            }
         }
     }
     .descripcion-champ{
@@ -230,6 +257,10 @@
         max-width:100%;
         position: relative;
         filter: brightness(70%);
+        @include mediaQuery(xl) {
+            height: auto;
+        };
+
     }
     .titulo-riot{
         color: map-get($map: $yellowPalette, $key: 'tres');
@@ -241,36 +272,20 @@
         z-index: 5;
         bottom: 12%;
         left: 5%;
-        @include mediaQuery(xxl) {
+        @include mediaQuery(xl) {
             top: 30%;
             left: 40%;
-        };
-        @include mediaQuery(l) {
-            left: 35%;
-        };
-        @include mediaQuery(m) {
-            left: 30%;
-        };
-        @include mediaQuery(sm) {
-            left: 25%;
+            display: none;
         };
     }
     .trailer-button{
         position: absolute;
         right: 5%;
         bottom: 12%;
-        @include mediaQuery(xxl) {
+        @include mediaQuery(xl) {
             right: 42%;
             bottom: 48%;
-        };
-        @include mediaQuery(l) {
-            right: 38%;
-        };
-        @include mediaQuery(m) {
-            right: 30%;
-        };
-        @include mediaQuery(sm) {
-            right: 25%;
+            display: none;
         };
     }
     .button-netflix{
@@ -280,23 +295,11 @@
             bottom: 5%;
             color: map-get($map: $yellowPalette, $key:'tres');
             background-color: map-get($map: $grayPalette, $key:'dos');
-            @include mediaQuery(xxl) {
+            @include mediaQuery(xl) {
                 right: 34%;
                 bottom: 34%;
+                display: none;
             };
-            @include mediaQuery(l) {
-                right: 28%;
-            };
-            @include mediaQuery(m) {
-                right: 20%;
-            };
-            @include mediaQuery(sm) {
-                right: 10%;
-            };
-            &:hover{
-            cursor: pointer;
-            transform: scale(1.05);
-        }
         .span-netflix{
             color:rgb(229, 9, 20);
             text-transform: uppercase;

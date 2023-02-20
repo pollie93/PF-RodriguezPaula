@@ -6,11 +6,35 @@
 }
 
 .img-general-logo, #botonera .container-logo .img-logo-l, #botonera .container-logo .img-logo-riot {
-  width: 200px;
   height: 100px;
 }
+@media (max-width: 1400px) {
+  .img-general-logo, #botonera .container-logo .img-logo-l, #botonera .container-logo .img-logo-riot {
+    height: 90px;
+  }
+}
+@media (max-width: 1200px) {
+  .img-general-logo, #botonera .container-logo .img-logo-l, #botonera .container-logo .img-logo-riot {
+    height: 85px;
+  }
+}
+@media (max-width: 992px) {
+  .img-general-logo, #botonera .container-logo .img-logo-l, #botonera .container-logo .img-logo-riot {
+    height: 75px;
+  }
+}
+@media (max-width: 768px) {
+  .img-general-logo, #botonera .container-logo .img-logo-l, #botonera .container-logo .img-logo-riot {
+    height: 65px;
+  }
+}
+@media (max-width: 576px) {
+  .img-general-logo, #botonera .container-logo .img-logo-l, #botonera .container-logo .img-logo-riot {
+    height: 55px;
+  }
+}
 
-.general-button, .main-container-entretenimiento .button-netflix, .blue-button, .button {
+.general-button, .main-container-entretenimiento .button-netflix, .error-404 .error-404-button .button-volver-index, .blue-button, .button {
   border: none;
   padding: 15px 32px;
   margin: 10px 0;
@@ -124,6 +148,11 @@ h2 {
   text-transform: uppercase;
   width: 30;
 }
+@media (max-width: 1200px) {
+  #botonera .container-logo .img-logo-riot {
+    display: none;
+  }
+}
 #botonera .container-logo .img-logo-riot:hover {
   padding: 6px 8px;
 }
@@ -152,20 +181,41 @@ h2 {
 .main-container .container-img {
   height: 100%;
 }
-.main-container .container-img .titulo-grieta {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-  filter: brightness(70%);
-  background-repeat: no-repeat;
-}
 .main-container .container-img .titulo-logo {
   width: 25%;
-  height: 33%;
   position: absolute;
   top: 30%;
   left: 38%;
+}
+@media (max-width: 1200px) {
+  .main-container .container-img .titulo-logo {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .main-container .container-img .titulo-logo {
+    width: 30%;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+  }
+}
+@media (max-width: 576px) {
+  .main-container .container-img .titulo-logo {
+    width: 30%;
+    position: absolute;
+    top: 58%;
+    left: 38%;
+  }
+}
+.main-container .container-img .video-index {
+  height: 100vh;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .main-container .container-img .video-index {
+    height: auto;
+  }
 }
 .main-container .info-juego {
   display: flex;
@@ -203,6 +253,57 @@ h2 {
   color: #f9f9f9;
 }
 
+.error-404 {
+  background-image: url("../images/error404/404.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.error-404 .error-404-button {
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .error-404 .error-404-button {
+    margin-bottom: 15%;
+  }
+}
+.error-404 .error-404-button .texto-404 {
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-weight: 800;
+  font-size: 2em;
+  text-align: center;
+  color: #f9f9f9;
+  background-color: rgb(181, 138, 77);
+}
+@media (max-width: 992px) {
+  .error-404 .error-404-button .texto-404 {
+    font-size: 1.1em;
+  }
+}
+.error-404 .error-404-button .button-volver-index {
+  color: #fcfcfa;
+  background-color: #3a9cc9;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .error-404 .error-404-button .button-volver-index {
+    font-size: 1.1em;
+  }
+}
+.error-404 .error-404-button .button-volver-index:hover {
+  background-color: #2a7080;
+  transform: scale(1.05);
+}
+
 #container-footer {
   display: flex;
   flex-direction: column;
@@ -217,6 +318,11 @@ h2 {
 }
 #container-footer .footer-text .text-footer-riot {
   flex-direction: column;
+}
+@media (max-width: 576px) {
+  #container-footer .footer-text .text-footer-riot {
+    text-align: center;
+  }
 }
 #container-footer .text-footer-redes-sociales {
   text-transform: uppercase;
@@ -325,10 +431,31 @@ h2 {
   position: relative;
   filter: brightness(70%);
 }
+@media (max-width: 768px) {
+  .main-esports .imagen-principal {
+    height: auto;
+  }
+}
 .main-esports .ver-temporada {
   position: absolute;
   top: 45%;
   left: 10%;
+}
+@media (max-width: 768px) {
+  .main-esports .ver-temporada {
+    top: 19%;
+    left: 4%;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 576px) {
+  .main-esports .ver-temporada {
+    top: 12%;
+    left: 10%;
+    font-weight: bold;
+    font-size: 1em;
+  }
 }
 .main-esports .ver-temporada .titulo-esports {
   color: #D1CFCC !important;
@@ -336,8 +463,18 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .main-esports .ver-temporada .titulo-esports {
+    font-size: 1.5em;
+  }
+}
 .main-esports .ver-temporada .titulo-esports.parrafo-temporada {
   margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .main-esports .ver-temporada .titulo-esports.parrafo-temporada {
+    font-size: 1.5em;
+  }
 }
 .main-esports .container-articulos-esports {
   display: flex;
@@ -356,6 +493,11 @@ h2 {
 .main-esports .container-articulos-esports .container-esports .imagen-esports {
   height: 60%;
   border-radius: 30px;
+}
+@media (max-width: 768px) {
+  .main-esports .container-articulos-esports .container-esports .imagen-esports {
+    max-height: 50%;
+  }
 }
 .main-esports .container-articulos-esports .container-esports .parrafo-esport {
   color: #fcfcfa;
@@ -422,6 +564,11 @@ h2 {
 }
 .container-champions .titulo .text-campeon {
   font-size: 80px;
+}
+@media (max-width: 576px) {
+  .container-champions .titulo .text-campeon {
+    font-size: 65px;
+  }
 }
 .container-champions .descripcion-champ {
   color: #f9f9f9;
@@ -490,6 +637,11 @@ h2 {
   position: relative;
   filter: brightness(70%);
 }
+@media (max-width: 1200px) {
+  .main-container-entretenimiento .img-arcane {
+    height: auto;
+  }
+}
 .main-container-entretenimiento .titulo-riot {
   color: rgb(237, 224, 206);
   margin-bottom: 15px;
@@ -501,25 +653,11 @@ h2 {
   bottom: 12%;
   left: 5%;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .main-container-entretenimiento .titulo-riot {
     top: 30%;
     left: 40%;
-  }
-}
-@media (max-width: 992px) {
-  .main-container-entretenimiento .titulo-riot {
-    left: 35%;
-  }
-}
-@media (max-width: 768px) {
-  .main-container-entretenimiento .titulo-riot {
-    left: 30%;
-  }
-}
-@media (max-width: 576px) {
-  .main-container-entretenimiento .titulo-riot {
-    left: 25%;
+    display: none;
   }
 }
 .main-container-entretenimiento .trailer-button {
@@ -527,25 +665,11 @@ h2 {
   right: 5%;
   bottom: 12%;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .main-container-entretenimiento .trailer-button {
     right: 42%;
     bottom: 48%;
-  }
-}
-@media (max-width: 992px) {
-  .main-container-entretenimiento .trailer-button {
-    right: 38%;
-  }
-}
-@media (max-width: 768px) {
-  .main-container-entretenimiento .trailer-button {
-    right: 30%;
-  }
-}
-@media (max-width: 576px) {
-  .main-container-entretenimiento .trailer-button {
-    right: 25%;
+    display: none;
   }
 }
 .main-container-entretenimiento .button-netflix {
@@ -555,30 +679,12 @@ h2 {
   color: rgb(237, 224, 206);
   background-color: #383838;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .main-container-entretenimiento .button-netflix {
     right: 34%;
     bottom: 34%;
+    display: none;
   }
-}
-@media (max-width: 992px) {
-  .main-container-entretenimiento .button-netflix {
-    right: 28%;
-  }
-}
-@media (max-width: 768px) {
-  .main-container-entretenimiento .button-netflix {
-    right: 20%;
-  }
-}
-@media (max-width: 576px) {
-  .main-container-entretenimiento .button-netflix {
-    right: 10%;
-  }
-}
-.main-container-entretenimiento .button-netflix:hover {
-  cursor: pointer;
-  transform: scale(1.05);
 }
 .main-container-entretenimiento .button-netflix .span-netflix {
   color: rgb(229, 9, 20);

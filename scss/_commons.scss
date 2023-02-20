@@ -15,6 +15,7 @@ h2{
     font-weight: $textBoldI;
 }
 
+
 // BOTON AZUL--Conoce a nuestros campeones & Esport
 .blue-button{
     @extend .general-button;
@@ -84,6 +85,9 @@ h2{
         width: 30;
         .img-logo-riot{
             @extend .img-general-logo;
+            @include mediaQuery(xl) {
+                display: none;
+            };
             &:hover{
                 @extend .general-logo;
                 padding: 6px 8px;
@@ -120,21 +124,34 @@ h2{
     background-color: map-get($map: $blackPalette, $key: 'dos');
     .container-img {
         height: $height;
-        .titulo-grieta{
-            position: relative;
-            height: 100vh;
-            width: 100vw;
-            max-width:100%;
-            filter: brightness(70%);
-            background-repeat: no-repeat;
-        }
         .titulo-logo{
             width: 25%;
-            height: 33%;
             position: absolute;
             top: 30%;
             left: 38%;
+            @include mediaQuery(xl) {
+                display: none;
+            };
+            @include mediaQuery(m) {
+                width: 30%;
+                position: absolute;
+                top: 55%;
+                left: 35%;
+            };
+            @include mediaQuery(sm) {
+                width: 30%;
+                position: absolute;
+                top: 58%;
+                left: 38%;
+            };
         }
+        .video-index{
+            height: 100vh;
+            width: 100%;
+            @include mediaQuery(xl) {
+                height: auto;
+            };
+}
     }
     .info-juego{
         @include flex(column,center,center);
@@ -169,6 +186,53 @@ h2{
     color: map-get($map: $whitePalette, $key: 'uno');
 }
 
+//ERROR 404
+.error-404{
+    background-image: url("../images/error404/404.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .error-404-button{
+        margin-bottom: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include mediaQuery(m) {
+            margin-bottom: 15%;
+        }
+        .texto-404{
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-weight:$textBoldII;
+            font-size: $textLgI;
+            text-align: center;
+            color: map-get($map: $whitePalette, $key: 'uno');
+            background-color: map-get($map: $yellowPalette, $key:'dos');
+            @include mediaQuery(l) {
+                font-size: $textMd;
+            }
+        };
+        .button-volver-index{
+            @extend .general-button;
+            color: map-get($map: $whitePalette, $key:'tres');
+            background-color: map-get($map: $bluePalette, $key:'uno');
+            text-align: center;
+            @include mediaQuery(l) {
+                font-size: $textMd;
+            }
+            &:hover{
+                background-color: map-get($map: $bluePalette, $key:'dos');
+                transform: scale(1.05);
+            }
+        }
+    }
+};
+
 //FOOTER
 #container-footer {
     @include flex (column, space-evenly,center);
@@ -179,6 +243,9 @@ h2{
         color: map-get($map: $whitePalette, $key: 'uno');
         .text-footer-riot{
             flex-direction: column;
+            @include mediaQuery(sm) {
+                text-align: center;
+            }
         }
     }
     .text-footer-redes-sociales{

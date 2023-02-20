@@ -8,6 +8,7 @@
     <!-- Meta para SEO -->
     <meta name="description" content="League of Legends, es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games">
     <meta name="keywords" content="League of legends, videojuego, mundial, esport, arcane, riot games">
+    <meta name="author" content="Paula Rodriguez"/>
     <!-- CSS BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
@@ -50,8 +51,10 @@
 
     <main class="main-container">
         <section class="container-img">
-            <img src="images/grieta.jpg" alt="Fondo Grieta" class="titulo-grieta">
             <img src="images/League-of-Legends-logo.png" alt="Logo League of Legends" class="titulo-logo">
+            <video class="video-index" autoplay loop muted>
+                <source src="video-index/video_leagueoflegends_index.webm" type="video/webm">
+            </video>
         </section>
         <section class="info-juego">
             <div class="titulo animate">
@@ -107,8 +110,8 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="¡Escribe aquí tu mensaje!"></textarea>
                   </div>
                 <div class="container-bottom">
-                    <input type="submit" value="Enviar" class="button button-submit">
-                    <input type="reset" value="Cancelar" class="button">
+                    <a href="pages/404.html" class="button button-submit">Enviar</a>
+                    <a href="pages/404.html" class="button">Cancelar</a>
                 </div>
             </form>
         </section>

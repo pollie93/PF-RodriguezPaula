@@ -31,6 +31,21 @@ $bluePalette:(
   'cuatro': #6fe2ff,
 );
 
+// Break-points
+@mixin mediaQuery($resolution){
+    @if $resolution == sm {
+        @media (max-width: $small-width) { @content; }
+    } @else if $resolution == m {
+        @media (max-width: $medium-width) { @content; }
+    } @else if $resolution == l {
+        @media (max-width: $large-width) { @content; }
+    } @else if $resolution == xl {
+        @media (max-width: $extra-large-width) { @content; }
+    } @else if $resolution == xxl {
+        @media (max-width: $extra-extra-large-width) { @content; }
+    }
+}
+
 //Extend
 //logo
 .general-logo{
@@ -40,8 +55,22 @@ $bluePalette:(
 }
 
 .img-general-logo{
-    width: 200px;
     height: 100px;
+    @include mediaQuery(xxl) {
+        height: 90px;
+    }
+    @include mediaQuery(xl) {
+        height: 85px;
+    }
+    @include mediaQuery(l) {
+        height: 75px;
+    }
+    @include mediaQuery(m) {
+        height: 65px;
+    }
+    @include mediaQuery(sm) {
+        height: 55px;
+    }
 }
 
 //botones
@@ -87,17 +116,3 @@ $bluePalette:(
     text-transform: $transform;
 }
 
-// Break-points
-@mixin mediaQuery($resolution){
-    @if $resolution == sm {
-        @media (max-width: $small-width) { @content; }
-    } @else if $resolution == m {
-        @media (max-width: $medium-width) { @content; }
-    } @else if $resolution == l {
-        @media (max-width: $large-width) { @content; }
-    } @else if $resolution == xl {
-        @media (max-width: $extra-large-width) { @content; }
-    } @else if $resolution == xxl {
-        @media (max-width: $extra-extra-large-width) { @content; }
-    }
-}
