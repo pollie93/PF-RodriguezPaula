@@ -9,14 +9,11 @@ En la pantalla de Conocé a nuestros campeones, se deja plasmado una grilla con 
 En noticias encontraremos diferentes artiículos con videos relacionadas a las noticias de league of legends.
 Al igual que la página noticias, Esport, cuenta con información relacionada a los esport y el mundial que caracteriza a dicho juego a nivel mundial.
 En entretenimiento veremos el film realizado para television lanzado por Riot Games, Arcane, el mismo lo podemos encontrar en Netflix, al igual que la banda sonora en spotify.
-Para el desarrollo de dicha web utilizamos videos/información extraída de la pagina de Riot Games-League of legends, quienes poseen las licencias de Copy rigth.
+Para el desarrollo de dicha web utilizamos videos/información extraída de la pagina de Riot Games-League of legends, quienes poseen las licencias de Copyright.
 
-## Instalacion
+## Instalacion:
 
-Utilización de Bootstrap por medio de cdn.
-Para ello crear antes que finalice el body, crear etiqueta 
-script y colocar la ruta de bootstrap en cdn.
-## SaSS:
+### SASS:
 1. Descargar e instalar [NodeJs](https://nodejs.org/es/)
 2. En nuestra terminal  con la ruta seleccionada a mi proyecto colocar los siguientes pasos:
     - Correr el comando npm install
@@ -27,7 +24,7 @@ Link a la [web](https://pollie93.github.io/PreEntrega2-Rodriguez/)
 
 > **_NOTA:_**  La web puede correr en cualquiera de los siguientes navegadores: Safari, Chrome, Microsoft Edge, Firefox, Opera, entre otros.
 
-Se utiliza Visual Studio
+Se utiliza Visual Studio Code
 
 Autora: Paula Rodriguez
 paularodriguez93.pr@gmail.com
