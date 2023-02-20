@@ -11,6 +11,26 @@ Al igual que la página noticias, Esport, cuenta con información relacionada a 
 En entretenimiento veremos el film realizado para television lanzado por Riot Games, Arcane, el mismo lo podemos encontrar en Netflix, al igual que la banda sonora en spotify.
 Para el desarrollo de dicha web utilizamos videos/información extraída de la pagina de Riot Games-League of legends, quienes poseen las licencias de Copyright.
 
+## Links de utilidad
+
+### Deploy
+
+1. Link al [deploy a netlify](https://pf-rodriguezpaula.netlify.app/)
+2. Link al [deploy web github pages](https://pollie93.github.io/PF-RodriguezPaula/)
+3. Link a [github](https://github.com/pollie93/PF-RodriguezPaula)
+
+### Wireframes
+1. Link [index-desktop](https://wireframe.cc/iuFt4b)
+2. Link [segunda pantalla-desktop](https://wireframe.cc/r57NHL)
+3. Link [tercera pantalla-desktop](https://wireframe.cc/GiRGXT)
+4. Link [cuarta pantalla-desktop](https://wireframe.cc/rNvehx)
+5. Link [quinta pantalla-desktop](https://wireframe.cc/UDH27D)
+6. Link [Index-mobile](https://wireframe.cc/72S8ub)
+7. Link [Index-mobile-boton hamburguesa](https://wireframe.cc/uDrdE1)
+8. Link [segunda pantalla-mobile](https://wireframe.cc/XCJ5qR)
+9. Link [tercera pantalla-mobile](https://wireframe.cc/tsUF3L)
+10. Link [cuarta pantalla-mobile](https://wireframe.cc/8rX2DA)
+11. Link [quinta pantalla-mobile](https://wireframe.cc/fCgNaF)
 ## Instalacion:
 
 ### SASS:
@@ -18,9 +38,6 @@ Para el desarrollo de dicha web utilizamos videos/información extraída de la p
 2. En nuestra terminal  con la ruta seleccionada a mi proyecto colocar los siguientes pasos:
     - Correr el comando npm install
     - Por último para correr el proyecto colocar: npm run sass:watch
-
-## Deploy
-Link a la [web](https://pollie93.github.io/PreEntrega2-Rodriguez/)
 
 > **_NOTA:_**  La web puede correr en cualquiera de los siguientes navegadores: Safari, Chrome, Microsoft Edge, Firefox, Opera, entre otros.
 
